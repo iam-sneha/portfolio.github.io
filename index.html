@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name | Web Developer Portfolio</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      :root {
+        --primary: #4f8cff;
+        --secondary: #232946;
+        --background: #f4f4f4;
+        --text: #232946;
+        --accent: #eebbc3;
+      }
+      body {
+        font-family: 'Montserrat', Arial, sans-serif;
+        background: var(--background);
+        color: var(--text);
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background: var(--secondary);
+        color: #fff;
+        padding: 2rem 0 1rem 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.2s;
+      }
+      nav a:hover {
+        color: var(--primary);
+      }
+      .hero {
+        padding: 3rem 1rem 2rem 1rem;
+        text-align: center;
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--secondary) 100%
+        );
+        color: #fff;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+      }
+      .hero .cta {
+        display: inline-block;
+        background: var(--accent);
+        color: var(--secondary);
+        font-weight: bold;
+        padding: 0.75rem 2rem;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .hero .cta:hover {
+        background: #fff;
+        color: var(--primary);
+      }
+      section {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 2rem 1rem;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+      }
+      h2 {
+        color: var(--primary);
+        margin-top: 0;
+      }
+      .skills-list,
+      .projects-list,
+      .timeline {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1rem 0 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .skills-list li,
+      .projects-list li {
+        background: var(--background);
+        border: 1px solid var(--primary);
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        color: var(--primary);
+        transition: background 0.2s;
+      }
+      .skills-list li:hover,
+      .projects-list li:hover {
+        background: var(--primary);
+        color: #fff;
+      }
+      .timeline {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .timeline-item {
+        border-left: 3px solid var(--primary);
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+        position: relative;
+      }
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: 0.5rem;
+        width: 12px;
+        height: 12px;
+        background: var(--primary);
+        border-radius: 50%;
+      }
+      .project-card {
+        background: var(--background);
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        width: calc(50% - 1rem);
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+        transition: box-shadow 0.2s;
+      }
+      .project-card:hover {
+        box-shadow: 0 4px 16px rgba(79, 140, 255, 0.15);
+      }
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .social-links a {
+        color: var(--primary);
+        margin-right: 1rem;
+        font-size: 1.5rem;
+        transition: color 0.2s;
+      }
+      .social-links a:hover {
+        color: var(--secondary);
+      }
+      @media (max-width: 700px) {
+        .project-card {
+          width: 100%;
+        }
+        .skills-list,
+        .projects-list {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sneha</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="Resume .pdf" class="cta" target="_blank"
+              ><i class="fa-solid fa-download"></i> Download CV</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <h1>Hello, I'm <span style="color: var(--accent)">Sneha</span></h1>
+      <p>
+        Web Developer with 3+ years of experience | Passionate about building
+        scalable, user-friendly web applications
+      </p>
+      <a href="#contact" class="cta">Let's Connect</a>
+      <div class="social-links" style="margin-top: 1rem">
+        <a
+          href="https://github.com/iam-sneha/portfolio"
+          target="_blank"
+          title="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/sneha-s-7238a932a/"
+          target="_blank"
+          title="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="mailto:imsnehasl@gmail.com" title="Email"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a web developer with a Bachelor of Engineering from VTU, passionate
+        about building modern web applications and always eager to learn new
+        technologies. With over three years of experience, I thrive on solving
+        real-world problems and contributing to impactful projects.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Angular</li>
+        <li>React.js</li>
+        <li>Bootstrap</li>
+        <li>Angular Material</li>
+        <li>Node.js</li>
+        <li>Golang</li>
+        <li>MongoDB</li>
+        <li>Problem Solving</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Software Engineer</strong>
+          <span style="float: right">2022 - Present</span>
+          <p>Created Task Manager Project using Angular.</p>
+          <p>
+            Developed e-commerce site for online shopping of clothes using
+            React.js and Javascript.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <strong>Associate Software Engineer</strong>
+          <span style="float: right">2021 - 2022</span>
+          <p>
+            Developed HR portal (Angular Material, Bootstrap, Golang, MongoDB)
+            with Time off management and employee data modules. Enhanced UI,
+            fixed errors, and delivered robust solutions.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <strong>Education</strong>
+          <ul>
+            <li>BE, VTU – Major Projects: Banking Java Project</li>
+            <li>PU, Government PU College, Karnataka</li>
+            <li>State Board Schooling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects-list">
+        <div class="project-card">
+          <h3>Task Manager Website</h3>
+          <p>
+            Built using Angular and Node.js. A robust platform for managing
+            tasks and team collaboration.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>HR Portal</h3>
+          <p>
+            Developed with Angular Material, Bootstrap, Golang, and MongoDB.
+            Features Time off management, employee profiles, and more.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>CMS Online Cloth Shopping</h3>
+          <p>
+            Designed and Developed with Figma, JavaScript and React.js. A modern
+            e-commerce site for online clothing sales.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>Banking Java Project</h3>
+          <p>
+            Academic project focusing on secure banking transactions and account
+            management.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <p><i class="fa-solid fa-envelope"></i> imsnehasl@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> +91-8431210668</p>
+        <p><i class="fa-solid fa-location-dot"></i> Karnataka, India</p>
+      </div>
+      <form style="margin-top: 1rem">
+        <input
+          type="text"
+          placeholder="Your Name"
+          required
+          style="
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            width: 100%;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+          "
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          required
+          style="
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            width: 100%;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+          "
+        />
+        <textarea
+          placeholder="Your Message"
+          required
+          style="
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            width: 100%;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+          "
+        ></textarea>
+        <button type="submit" class="cta" style="border: none">
+          Send Message
+        </button>
+      </form>
+    </section>
+
+    <footer style="text-align: center; padding: 1rem 0; color: #aaa">
+      &copy; 2025 Your Name. All rights reserved.
+    </footer>
+  </body>
+</html>
